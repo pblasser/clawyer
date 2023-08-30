@@ -12,8 +12,11 @@ gilasso init 100
 instr 1
  kenv linseg 0,0.1,p4,p3,0
  a1 oscil kenv, p5, 1
+ kgliss linseg gilasso, 0.1, p5
+ a1 pluck p4,kgliss,p5,0,1
  gagasso = a1 
- out a1
+ gilasso=p5
+; out a1
 endin
 
 instr 2
@@ -54,6 +57,6 @@ endin
 instr 100
  a1 init 0
  a1 delay gagasso,14
- out a1
+ out gagasso
  gagasso=a1
 endin

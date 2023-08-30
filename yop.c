@@ -31,16 +31,16 @@ int main(void){
  tcsetattr( STDIN_FILENO, TCSANOW, &newt);
  while((c=getchar())!= 27) {   
   switch(c) { 
-   yrt('z',100);
-   yrt('x',110);
+   yrt('z',70);
+   yrt('x',90);
    yrt('c',130);
-   yrt('v',120);
-   yrt('b',140);
-   yrt('n',150);
-   yrt('m',160);
-   yrt(',',170);
-   yrt('.',180);
-   yrt('<',190);
+   yrt('v',140);
+   yrt('b',150);
+   yrt('n',160);
+   yrt('m',170);
+   yrt(',',180);
+   yrt('.',190);
+   yrt('<',200);
 
    art('a',1300);
    art('s',1400);
