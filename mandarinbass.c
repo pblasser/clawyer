@@ -71,7 +71,8 @@ int main(void){
    drt('5',5);
    drt('6',6);
 
-
+ case '7': 
+ fprintf(stdout,"$ZANGESOTOR(2,0)"); break;
 
   }  
  // fflush( csound_pointer );

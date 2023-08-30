@@ -1,5 +1,5 @@
-sr = 48000
-kr = 480
+sr = 8000
+kr = 80
 ksmps = 100
 nchnls = 1
 
