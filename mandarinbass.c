@@ -72,7 +72,10 @@ int main(void){
    drt('6',6);
 
  case '7': 
- fprintf(stdout,"$ZANGESOTOR(2,0)"); break;
+ fprintf(stdout,"i 2 0 1 1 1.22\ni 2 1 1 3 4.33\ni 2 2 1 3 4.33\n"); 
+
+
+break;
 
   }  
  // fflush( csound_pointer );
