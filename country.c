@@ -5,9 +5,9 @@
 
 #define drt(ch,n)\
  case ch: \
- fprintf(stdout,"i 10 0 1 %f 0\n",n); break; \
+ fprintf(stdout,"i 10 0 0.5 %f 0\n",n); break; \
  case ch-32: \
- fprintf(stdout,"i 10 0 1 %f 1\n",n); break
+ fprintf(stdout,"i 10 0 0.5 %f 1\n",n); break
  
  
 #define art(ch,n)\
@@ -16,7 +16,9 @@
  
 #define prt(ch,nm)\
  case ch: \
- fprintf(stdout,"i 2 0 0.3 %d\n",nm); break
+ fprintf(stdout,"i %d 0 0.3 0\n",nm); break; \
+ case ch-32: \
+ fprintf(stdout,"i %d 0 0.3 1\n",nm); break
 
 
 int main(void){  
@@ -30,15 +32,11 @@ int main(void){
  tcsetattr( STDIN_FILENO, TCSANOW, &newt);
  while((c=getchar())!= 27) {   
   switch(c) { 
-prt('1',300);
-prt('2',301);
-prt('3',310);
-prt('4',311);
-prt('5',360);
-prt('6',371);
-prt('7',380);
-prt('8',391);
-
+prt('q',1);
+prt('w',2);
+prt('e',3);
+prt('r',4);
+prt('t',5);
 
    art('a',3.0/4.0);
       art('s',5.0/6.0);
