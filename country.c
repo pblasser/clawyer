@@ -5,20 +5,27 @@
 
 #define drt(ch,n)\
  case ch: \
- fprintf(stdout,"i 10 0 0.5 %f 0\n",n); break; \
+ fprintf(stdout,"i 10 0 %d %f 0\n",p,n); break; \
  case ch-32: \
- fprintf(stdout,"i 10 0 0.5 %f 1\n",n); break
+ fprintf(stdout,"i 10 0 %d %f 1\n",p,n); break
+ 
+ 
+#define nurt(ch)\
+ case ch: \
+ p = ch-48; break
  
  
 #define art(ch,n)\
  case ch: \
- fprintf(stdout,"i 11 0 4 %f \n",n); break
+ fprintf(stdout,"i 11 0 %d %f 0\n",p,n); break;\
+  case ch-32: \
+ fprintf(stdout,"i 11 0 %d %f 1\n",p,n); break
  
 #define prt(ch,nm)\
  case ch: \
- fprintf(stdout,"i %d 0 0.3 0\n",nm); break; \
+ fprintf(stdout,"i %d 0 %d 0\n",nm,p); break; \
  case ch-32: \
- fprintf(stdout,"i %d 0 0.3 1\n",nm); break
+ fprintf(stdout,"i %d 0 %d 1\n",nm,p); break
 
 
 int main(void){  
@@ -32,6 +39,18 @@ int main(void){
  tcsetattr( STDIN_FILENO, TCSANOW, &newt);
  while((c=getchar())!= 27) {   
   switch(c) { 
+  
+  nurt('1');
+  nurt('2');
+  nurt('3');
+  nurt('4');
+  nurt('5');
+  nurt('6');
+  nurt('7');
+  nurt('8');
+  
+
+
 prt('q',1);
 prt('w',2);
 prt('e',3);
