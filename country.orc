@@ -72,6 +72,7 @@ p3 = p3/10
 endin
 
 
+
 instr 10
  p3=p3/4
  kenv linseg 0,0.01,1,p3,0
@@ -98,8 +99,20 @@ instr 11
   out a2
  endif
 endin
-
 instr 12
+ kenv linseg 1, p3, 0
+ axcite mpulse 8000*kenv, 60/80
+ a1b wgpluck gib*8*p4, 4000, 0.1, 0.1, 5, 1000, axcite
+ a1 wguide1 axcite, gib*8*p4, 4000, 0.9999
+ a2 wguide2 a1b, 2000, 2300, 3000, 1500, 0.2,0.2
+ if p5==1 then
+  gast = gast*(1-kenv) + a2
+ else
+  out a2
+ endif
+endin
+
+instr 13
 endin ;spacebar delete
 
 instr 100

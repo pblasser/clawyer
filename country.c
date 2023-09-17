@@ -15,6 +15,12 @@
  p = ch-48; break
  
  
+#define brt(ch,n)\
+ case ch: \
+ fprintf(stdout,"i 12 0 %d %f 0\n",p,n); break;\
+  case ch-32: \
+ fprintf(stdout,"i 12 0 %d %f 1\n",p,n); break
+  
 #define art(ch,n)\
  case ch: \
  fprintf(stdout,"i 11 0 %d %f 0\n",p,n); break;\
@@ -56,6 +62,13 @@ prt('w',2);
 prt('e',3);
 prt('r',4);
 prt('t',5);
+
+
+   brt('y',3.0/4.0);
+   brt('u',5.0/6.0);
+   brt('i',1.0);
+   brt('o',9.0/8.0);
+   brt('p',4.0/3.0);
 
    art('a',3.0/4.0);
       art('s',5.0/6.0);
