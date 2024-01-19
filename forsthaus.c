@@ -3,21 +3,15 @@
 #include <term.h>
 #include <termios.h>
 
-#define yrt(ch,nm)\
+#define yrt(ch,d,f,s,e)\
  case ch: \
- fprintf(stdout,"i 1 0 1 8000 %d\n",nm); break
-#define art(ch,nm)\
+ fprintf(stdout,"i 1 0 %d %d %d %d\n",d,f,s,e); break
+#define art(ch,d,f,s,e)\
  case ch: \
- fprintf(stdout,"i 2 0 1 8000 %d\n",nm); break
-#define qrt(ch,nm)\
+ fprintf(stdout,"i 2 0 %d %d %d %d\n",d,f,s,e); break
+#define qrt(ch,d,f,s,e)\
  case ch: \
- fprintf(stdout,"i 3 0 1 8000 %d\n",nm); break
-#define drt(ch,nm)\
- case ch: \
- fprintf(stdout,"i %d 0 1 8000 \n",nm); break
-#define prt(ch,nm)\
- case ch: \
- p = nm; break
+ fprintf(stdout,"i 3 0 %d %d %d %d\n",d,f,s,e); break
 
 
 int main(void){  
@@ -31,42 +25,39 @@ int main(void){
  tcsetattr( STDIN_FILENO, TCSANOW, &newt);
  while((c=getchar())!= 27) {   
   switch(c) { 
-   yrt('z',100);
-   yrt('x',110);
-   yrt('c',130);
-   yrt('v',120);
-   yrt('b',140);
-   yrt('n',150);
-   yrt('m',160);
-   yrt(',',170);
-   yrt('.',180);
-   yrt('<',190);
+   yrt('z',1,2,1100,1200);
+   yrt('x',3,2,110,110);
+   yrt('c',4,1,800,600);
+   yrt('v',4,1,600,800);
+   yrt('b',1,3,700,750);
+   yrt('n',4,3,720,720);
+   yrt('m',1,3,750,750);
+   yrt(',',3,3,790,790);
+   yrt('.',6,1,400,300);
+   yrt('/',8,3,60,66);   
 
-   art('a',1300);
-   art('s',1400);
-   art('d',1500);
-   art('f',2600);
-   art('g',5200);
-   art('h',5300);
-   art('j',1700);
-   art('k',1800);
-   art('l',1900);
-   art(';',2000);
+   art('a',1,2,110,120);
+   art('s',3,2,110,110);
+   art('d',4,1,800,600);
+   art('f',4,1,600,800);
+   art('g',1,3,700,750);
+   art('h',4,3,720,720);
+   art('j',1,3,750,750);
+   art('k',3,3,790,790);
+   art('l',6,1,400,300);
+   art(';',8,3,60,66); 
 
-   qrt('q',1300);
-   qrt('w',1400);
-   qrt('e',1500);
-   qrt('r',2600);
-   qrt('t',5200);
-   qrt('y',5300);
-   qrt('u',1700);
-   qrt('i',1800);
-   qrt('o',1900);
-   qrt('p',2000);
+   qrt('q',1,2,1100,1200);
+   qrt('w',3,2,110,110);
+   qrt('e',4,1,800,600);
+   qrt('r',4,1,600,800);
+   qrt('t',1,3,700,750);
+   qrt('y',4,3,720,720);
+   qrt('u',1,3,750,750);
+   qrt('i',3,3,790,790);
+   qrt('o',6,1,400,300);
+   qrt('p',8,3,60,66); 
 
-   drt('4',4);
-   drt('5',5);
-   drt('6',6);
 
 
 
