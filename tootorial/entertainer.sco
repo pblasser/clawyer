@@ -1,0 +1,43 @@
+
+#define MTOF(a)#[440*2^(($a-69)/12)]#
+
+
+i 1 0 0.5 3 $MTOF(62) $MTOF(62)
+i 1 + 0.5 3 $MTOF(63) $MTOF(63)
+s
+i 1 0 0.5 3 $MTOF(64) $MTOF(72)
+i 1 + 1 3 $MTOF(72) $MTOF(72)
+i 1 + 0.5 3 $MTOF(64) $MTOF(72)
+i 1 + 1 3 $MTOF(72) $MTOF(72)
+i 1 + 0.5 3 $MTOF(64) $MTOF(72)
+i 1 + 2 3 $MTOF(72) $MTOF(72)
+
+i 2 0 1 4 $MTOF(48) $MTOF(48)
+i 4 1 1 4 $MTOF(55) $MTOF(60)
+i 2 2 1 4 $MTOF(51) $MTOF(52)
+i 4 3 1 4 $MTOF(55) $MTOF(60)
+
+i 2 4 1 4 $MTOF(52) $MTOF(53)
+i 4 5 1 4 $MTOF(57) $MTOF(60)
+i 2 6 1 4 $MTOF(53) $MTOF(52)
+i 4 7 1 4 $MTOF(55) $MTOF(60)
+
+i 4 6.5 0.5 2 $MTOF(76) $MTOF(84)
+i 4 + 0.5 2 $MTOF(77) $MTOF(86)
+i 4 + 0.5 2 $MTOF(78) $MTOF(87)
+
+s
+
+i 2 0 1 4 $MTOF(43) $MTOF(43)
+i 4 1 1 4 $MTOF(52) $MTOF(55)
+i 2 2 1 4 $MTOF(43) $MTOF(43)
+i 4 3 1 4 $MTOF(53) $MTOF(55)
+i 2 4 2 4 $MTOF(49) $MTOF(48)
+
+i 4 0 0.5 4 $MTOF(79) $MTOF(88)
+i 4 + 0.5 2 $MTOF(76) $MTOF(84)
+i 4 + 0.5 3 $MTOF(77) $MTOF(86)
+i 4 + 1 4 $MTOF(79) $MTOF(88)
+i 4 + 0.5 3 $MTOF(74) $MTOF(83)
+i 4 + 1 3 $MTOF(77) $MTOF(86)
+i 4 + 2 3 $MTOF(76) $MTOF(84)
