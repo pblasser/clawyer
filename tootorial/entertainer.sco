@@ -1,7 +1,6 @@
 
 #define MTOF(a)#[440*2^(($a-69)/12)]#
 
-
 i 1 0 0.5 3 $MTOF(62) $MTOF(62)
 i 1 + 0.5 3 $MTOF(63) $MTOF(63)
 s
