@@ -11,5 +11,42 @@ nchnls = 1
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 ifn ftgen 1, 0, 1024, 7, 0, 256, 1, 512, -1, 256, 0
-ifn ftgen
+
+
+instr 1
+acrotalon stix 400
+out acrotalon
+;casted phisem perc
+;to ancient ensemble
+;(macro)
+endin
+atympanon STKDrummer
+
+akoudounion
+gogobel
+
+acymbalum
+asistrum sleighbells
+asyrinx
+fmpercfl
+freeverb
+
+
+
+
+
+
+
+
