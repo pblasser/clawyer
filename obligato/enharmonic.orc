@@ -8,40 +8,61 @@ nchnls = 1
 ;about jungle techno
 ;of the antiquities
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ifn ftgen 1, 0, 1024, 7, 0, 256, 1, 512, -1, 256, 0
 
 
 instr 1
-acrotalon stix 400
-out acrotalon
+asig linseg 8000, 0.001, 0
+asig noise asig, 0
+awg wguide1 asig, 1200, 1800, 0.9
+out awg
+;acrotalon stix 8000,1
+;out acrotalon
 ;casted phisem perc
 ;to ancient ensemble
 ;(macro)
 endin
-atympanon STKDrummer
 
-akoudounion
-gogobel
+instr 2
+;atympanon pluck 8000, 200, 300, 1, 3, 0.1, 1
+;out atympanon
+asig linseg 8000, 0.05, 0
+asig oscil asig, p4*0.567, 1     
 
-acymbalum
-asistrum sleighbells
-asyrinx
-fmpercfl
-freeverb
+awg wguide2 asig, p4, p4+12, p4*2.13, p4*3.45, 0.24999,0.25
+out awg
+endin
+
+instr 3
+akoudounion gogobel, 8000, 1200, 0.8, 0.2, 1, 10, 1, 1
+out akoudounion
+endin
+
+instr 4
+a1 linseg 8000, p3, 0
+acymbalum noise a1, 0
+out acymbalum
+endin
+
+instr 5
+asistrum sleighbells 8000, 0.5
+out asistrum
+endin
+
+instr 6
+a1 linseg 8000, p3, 0
+a2 linseg p4, p3, p5
+a1 oscil a1, a2, 1
+a1 butterlp a1, 800
+out a1
+endin
+
+instr 7
+asyrinx fmpercfl 8000, p4, p5, 5, .01, 6
+out asyrinx
+endin
+
+;freeverb
 
 
 
