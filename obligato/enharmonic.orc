@@ -9,7 +9,8 @@ nchnls = 1
 ;of the antiquities
 
 ifn ftgen 1, 0, 1024, 7, 0, 256, 1, 512, -1, 256, 0
-
+ifn ftgen 2, 0, 8, 2, 1, 28/27,16/15,4/3,3/2,14/9,8/5,2
+ibase=55
 
 instr 1
 asig linseg 8000, 0.001, 0
@@ -60,6 +61,14 @@ endin
 instr 7
 asyrinx fmpercfl 8000, p4, p5, 5, .01, 6
 out asyrinx
+endin
+
+instr 8 
+kenv linseg 8000, p3, 8000
+inote table p4%8,2
+inote = inote * (2^floor(p4/8)) * 55 *4
+akithara pluck kenv, inote, inote, 0, 1
+out akithara 
 endin
 
 ;freeverb
