@@ -1,3 +1,28 @@
+;imagine being a dog taking the regiobahn
+;for the first time
+;iz sounds like a cat from hell
+;thats the regenerative magnetic fields
+;bu of course you dont know that
+;youre scare as hell.
+;but when you get out to the country
+;run in the fields, chase crows,
+;your fear is gone and youd do it again.
+;in a heartbeat
+;so the next time you gladly join
+;your human, your heart is racing 
+;for the country.
+;the train approaches and you hear
+;compression waves of ghost magnetic modulation
+;coalescing into a powerful
+;nightmare hellcat hunting call.
+;your longing for the country balances it out.
+;you think of your human,
+;how they have managed to harness
+;powerful country visiting magic
+;powered by cat hunting calls.
+;in a way, that makes deeper sense
+;than the human ever knew.
+
 sr = 48000
 kr = 480
 ksmps = 100
