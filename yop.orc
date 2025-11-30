@@ -29,7 +29,7 @@ endin
 
 
 instr 3
- gilasso = p5
+ gilasso = p5/10
 endin
 
 instr 4
