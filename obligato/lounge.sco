@@ -1,3 +1,15 @@
+;the lounge
+;in Suicide in Bb
+;a dusty piano
+;with an old radio on top
+;tinny trumpets haze
+;the midday, or is it midnite?
+;... detectives
+;the chalk is dusting up
+;evidence scabs ... transmission
+;morse girlfriend
+;he was never here
+
 
 ;0
 i 3 0 2 8000  [1]

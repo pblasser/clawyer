@@ -1,4 +1,13 @@
 
+;at the end of the play,
+;Suicide in Bb:A Mysterious Overture
+;there is a Waltz to curtain.
+;The full version by Peter B
+;is an mp3
+;sampling Max Roach
+;who turns out did music
+;for Suicide in Bb
+
 t 0 110
 
 

@@ -1,3 +1,10 @@
+
+;Niles, main character of Suicide in Bb
+;Never present in the play
+;He is an absence whose story is reconstructed
+;Sam Shepherd
+;Just Intonation
+
 t 0 90
 
 
