@@ -33,11 +33,24 @@ out a2
 endin
 
 
+
 instr 2
 kenv linseg 8000, p3, 0
 kpch linseg p4, p3, p5
 a1 oscil kenv, kpch, 2
 a1 butterlp a1, 1200
 out a1
+endin
+
+instr 3 ; --- Bongo Synthesizer ---
+  iamp     = p4         ; Peak amplitude (0 to 1)
+  ifreq    = p5         ; Fundamental frequency (Hz)
+  anoise   rand     iamp 
+  apitsig  linseg   1, 0.005, 0  
+  astrike  =        anoise * apitsig
+  ares1    reson    astrike, ifreq, ifreq*0.05
+  ares2    reson    astrike, ifreq * 1.6, ifreq*0.08
+  ares3    reson    astrike, ifreq * 2.1, ifreq*0.1
+  out     ares1+ares2+ares3
 endin
 
